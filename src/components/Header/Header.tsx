@@ -1,6 +1,7 @@
 import React, { CSSProperties, ReactElement } from "react";
 import "./Header.css";
-import Menu from "../Assets/Menu.svg";
+import Menu from "../../Assets/Menu.svg";
+import clsx from "clsx";
 
 type TLiProps = {
   children: React.ReactNode;
@@ -11,32 +12,32 @@ type TLiProps = {
 const links = [
   {
     title: "Home",
-    i: 0,
+    i: 1,
     a: "/",
   },
   {
     title: "About",
-    i: 1,
+    i: 2,
     a: "/about",
   },
   {
     title: "Services",
-    i: 2,
+    i: 3,
     a: "/service",
   },
   {
     title: "Shop",
-    i: 3,
+    i: 4,
     a: "/Shop",
   },
   {
     title: "Blog",
-    i: 4,
+    i: 5,
     a: "/Blog",
   },
   {
     title: "Contact",
-    i: 5,
+    i: 6,
     a: "/Contact",
   },
 ];
@@ -54,7 +55,7 @@ const Li = ({ children, i, a }: TLiProps): ReactElement => {
   );
 };
 
-const Header = () => {
+const Header = ({ counter }: any) => {
   const [dropdownVisible, setDropdownVisible] = React.useState(false);
 
   const handleDropdownVisible = () => {
@@ -62,24 +63,26 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <header>
-        <div className={`user-dropdown ${dropdownVisible ? "active" : ""}`}>
-          <p className="companyName">PIP</p>
-          <button className="btn" onClick={handleDropdownVisible}>
-            <img src={Menu} className="navBarIcon" alt="" />
-          </button>
+    <header className={clsx("user-dropdown", dropdownVisible && "active")}>
+      <span className="companyName">PIP</span>
 
-          <nav className="navBar">
-            <ul>
-              {links.map((link) => (
-                <Li key={link.i} i={link.i} a={link.a} children={link.title} />
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </header>
-    </div>
+      {counter}
+
+      <img
+        src={Menu}
+        className="navBarIcon"
+        alt=""
+        onClick={handleDropdownVisible}
+      />
+
+      <nav className="navBar">
+        <ul>
+          {links.map((link) => (
+            <Li key={link.i} i={link.i} a={link.a} children={link.title} />
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 };
 

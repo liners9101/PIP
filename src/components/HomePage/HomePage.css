@@ -1,0 +1,31 @@
+:root{
+    --button-width: 400px;
+    --button-height: 100px;
+}
+
+.exploreMore {
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+
+    align-items: center;
+
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: red;
+
+    right: ;
+}
+
+.exploreMore a {
+    display: flex;
+    flex-flow: row nowrap;
+
+
+    left: 100px;
+}
+
+.exploreMore img {
+    height: var(--button-height);
+    width: auto;
+}

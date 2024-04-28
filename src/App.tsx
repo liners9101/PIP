@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
-import Header from './components/Header';
+import React from "react";
+import "./App.css";
+import MainLayout from "./components/Layouts/MainLayout/MainLayout";
+import { HomePage } from "./components";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-    </div>
+    <MainLayout>
+      <HomePage />
+      my super data
+    </MainLayout>
   );
 }
 

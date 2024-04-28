@@ -1,0 +1,23 @@
+:root {
+    --text-color: #FFF;
+    --text-font-size: 1.5rem;
+
+    --bg-color-grey-1: rgba(80, 114, 135, 100);
+    --bg-color-grey-2: rgba(60, 91, 111, 100);
+    --bg-gradient-grey: linear-gradient(0deg, var(--bg-color-grey-1) 0%, var(--bg-color-grey-2) 100%);
+
+    --transition: ease-in-out;
+
+    /*--step*/
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    background: var(--bg-gradient-grey);
+    background-repeat: no-repeat;
+}
