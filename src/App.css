@@ -6,9 +6,9 @@
     --bg-color-grey-2: rgba(60, 91, 111, 100);
     --bg-gradient-grey: linear-gradient(0deg, var(--bg-color-grey-1) 0%, var(--bg-color-grey-2) 100%);
 
-    --transition: ease-in-out;
+    --button-color: rgba(255, 255, 255, 10%);
 
-    /*--step*/
+    --transition: ease-in-out;
 }
 
 #root {
@@ -20,4 +20,16 @@
 
     background: var(--bg-gradient-grey);
     background-repeat: no-repeat;
+}
+
+* {
+    color: var(--text-color);
+    font-size: var(--text-font-size);
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+    -webkit-user-select: none;
+    user-select: none;
 }

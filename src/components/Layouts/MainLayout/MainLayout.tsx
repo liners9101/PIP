@@ -21,10 +21,9 @@ const MainLayout: FC<TMainLayoutProps> = ({
 
   return (
     <>
-      <Header counter={counter} />
-      <button onClick={addCount}>add count</button>
+      <Header />
       {children}
-      <footer style={{ marginTop: "auto" }}>Counter: {counter}</footer>
+      <footer style={{ marginTop: "auto" }}>Footer</footer>
     </>
   );
 };
