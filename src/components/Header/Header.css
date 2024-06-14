@@ -1,5 +1,7 @@
 .navBarIcon {
-    margin-left: auto;
+    scale: 25%;
+    position: relative;
+    left: 50px;
     cursor: pointer;
     transition: 200ms var(--transition);
 }
@@ -8,8 +10,14 @@
     transform: rotate(180deg);
 }
 
+.dropdown {
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    left: calc(100vw - 300px);
+}
+
 .navBar {
-    position: fixed;
     top: 75px;
     right: 0;
     padding: 24px;
@@ -28,8 +36,8 @@
 
 header {
     display: flex;
-    padding: 35px;
-    position: relative;
+    /*padding: 35px;*/
+    position: sticky;
     /*left: calc(100vw - 100px - calc(var(--text-font-size) * 2));*/
 }
 

@@ -67,21 +67,22 @@ const Header = ({ counter }: any) => {
       <span className="companyName">PIP</span>
 
       {counter}
+      <div className="dropdown">
+        <img
+          src={Menu}
+          className="navBarIcon"
+          alt=""
+          onClick={handleDropdownVisible}
+        />
 
-      <img
-        src={Menu}
-        className="navBarIcon"
-        alt=""
-        onClick={handleDropdownVisible}
-      />
-
-      <nav className="navBar">
-        <ul>
-          {links.map((link) => (
-            <Li key={link.i} i={link.i} a={link.a} children={link.title} />
-          ))}
-        </ul>
-      </nav>
+        <nav className="navBar">
+          <ul>
+            {links.map((link) => (
+              <Li key={link.i} i={link.i} a={link.a} children={link.title} />
+            ))}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
